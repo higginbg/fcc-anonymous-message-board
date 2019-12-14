@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Quicksand&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  background: #fff;
+}
+
+h1, h2, h3 {
+  color: #1c4587;
+}
+
+body {
+  width: 90%;
+  min-width: 300px;
+  max-width: 1000px;
+  background: whitesmoke;
+  margin: 30px auto;
+  padding: 15px 30px;
+  border-radius: 7px;
+  box-shadow: 0 0 5px #999;
+}
+
+code {
+  font-family: 'Inconsolata', monospace;
+  background: #ddd;
+  padding: 1px;
+}
+
+label {
+  text-align: left;
+}
+
+input[type="text"], textarea {
+  width: 200px;
+  padding: 2px;
+  margin: 5px auto;
+}
+
+textarea{
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.reply {
+  border: 1px dotted black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.newReply {
+  margin: 10px 5px 10px 5px;
+}
+
+.thread {
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.id {
+  font-size: 10.5px;
+}
