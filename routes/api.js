@@ -8,8 +8,8 @@
 
 "use strict";
 
-const ThreadHandler = require("../controllers/threadHandler.js");
-const ReplyHandler = require("../controllers/replyHandler.js");
+const ThreadHandler = require("../controllers/threadHandler");
+const ReplyHandler = require("../controllers/replyHandler");
 
 // Connect to db
 const mongoose = require("mongoose");
