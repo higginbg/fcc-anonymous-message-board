@@ -48,7 +48,7 @@ function ThreadHandler() {
   };
 
   // Handle posting new thread
-  this.newThread = (req, res) => {
+  this.threadNew = (req, res) => {
     const { board } = req.params;
     const { text, delete_password } = req.body;
 
@@ -74,7 +74,7 @@ function ThreadHandler() {
   };
 
   // Report a thread
-  this.reportThread = (req, res) => {
+  this.threadReport = (req, res) => {
     const { board } = req.params;
     const { thread_id } = req.body;
 
@@ -92,7 +92,7 @@ function ThreadHandler() {
   };
 
   // Delete a thread with valid password
-  this.deleteThread = (req, res) => {
+  this.threadDelete = (req, res) => {
     const { board } = req.params;
     const { thread_id, delete_password } = req.body;
 

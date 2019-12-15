@@ -40,7 +40,7 @@ function ReplyHandler() {
   };
 
   // Handle new replies in threads
-  this.newReply = (req, res) => {
+  this.replyNew = (req, res) => {
     const { board } = req.params;
     const { text, thread_id, delete_password } = req.body;
 
@@ -68,7 +68,7 @@ function ReplyHandler() {
   };
 
   // Report a reply
-  this.reportReply = (req, res) => {
+  this.replyReport = (req, res) => {
     const { board } = req.params;
     const { thread_id, reply_id } = req.body;
 
@@ -87,7 +87,7 @@ function ReplyHandler() {
   };
 
   // Delete reply with valid password
-  this.deleteReply = (req, res) => {
+  this.replyDelete = (req, res) => {
     const { board } = req.params;
     const { thread_id, reply_id, delete_password } = req.body;
 

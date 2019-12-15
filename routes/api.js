@@ -8,33 +8,29 @@
 
 "use strict";
 
-const { expect } = require("chai");
-
 const ThreadHandler = require("../controllers/threadHandler.js");
 const ReplyHandler = require("../controllers/replyHandler.js");
 
 // Connect to db
 const mongoose = require("mongoose");
-mongoose.connect(process.env.DB, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-});
+mongoose.connect(process.env.DB, { useUnifiedTopology: true, useNewUrlParser: true });
 
 module.exports = app => {
-  const threadHandler = new ThreadHandler();
-  const replyHandler = new ReplyHandler();
+  
+  const { threadList, threadNew, threadReport, threadDelete } = new ThreadHandler();
+  const { replyList, replyNew, replyReport, replyDelete, } = new ReplyHandler();
 
   app
     .route("/api/threads/:board")
-    .get(threadHandler.threadList)
-    .post(threadHandler.newThread)
-    .put(threadHandler.reportThread)
-    .delete(threadHandler.deleteThread);
+    .get(threadList)
+    .post(threadNew)
+    .put(threadReport)
+    .delete(threadDelete);
 
   app
     .route("/api/replies/:board")
-    .get(replyHandler.replyList)
-    .post(replyHandler.newReply)
-    .put(replyHandler.reportReply)
-    .delete(replyHandler.deleteReply);
+    .get(replyList)
+    .post(replyNew)
+    .put(replyReport)
+    .delete(replyDelete);
 };
